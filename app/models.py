@@ -6,8 +6,12 @@ from app import login
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(64), index=True, unique=True)
-    email = db.Column(db.String(120), index=True, unique=True)
+    fio = db.Column(db.String(120))
+    department = db.Column(db.String(120))
+    problem = db.Column(db.String(120))
+    place = db.Column(db.String(120))
+    username = db.Column(db.String(64))
+    email = db.Column(db.String(120))
     password_hash = db.Column(db.String(128))
 
     def __repr__(self):

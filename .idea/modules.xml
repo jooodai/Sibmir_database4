@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Sibmir_database/.idea/Sibmir_database.iml" filepath="$PROJECT_DIR$/../Sibmir_database/.idea/Sibmir_database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Sibmir_database_резервная рабочая копия/.idea/Sibmir_database.iml" filepath="$PROJECT_DIR$/../Sibmir_database_резервная рабочая копия/.idea/Sibmir_database.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Sibmir_database4.iml" filepath="$PROJECT_DIR$/.idea/Sibmir_database4.iml" />
     </modules>
   </component>
