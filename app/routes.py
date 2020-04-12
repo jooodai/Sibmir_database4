@@ -3,13 +3,13 @@ from flask import render_template, flash, redirect, url_for
 from app import app
 from app.forms import LoginForm
 from flask_login import current_user, login_user
-from app.models import User
+from app.models import User, Name_element
 from flask_login import logout_user
 from flask_login import login_required
 from flask import request
 from werkzeug.urls import url_parse
 from app import db
-from app.forms import RegistrationForm
+from app.forms import RegistrationForm, RegistrationNewElement
 
 @app.route('/')
 @app.route('/index')
@@ -74,4 +74,14 @@ def user(username):
         {'author': user, 'body': 'Test post #2'}
     ]
     return render_template('user.html', user=user, posts=posts)
+
+@app.route('/newelement', methods=['GET', 'POST'])
+def element():
+    form = RegistrationNewElement()
+    if form.validate_on_submit():
+        in_element = Name_element(name_element=form.name_element)
+        db.session.add(in_element)
+        db.session.commit()
+        return redirect(url_for('newelement'))
+    return render_template('newelement.html', form=form)
 

@@ -27,3 +27,9 @@ class User(UserMixin, db.Model):
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
+
+
+class Name_element(db.Model):
+    __tablename__ = "name_element"
+    id = db.Column(db.Integer, primary_key=True)
+    name_element = db.Column(db.String(120))

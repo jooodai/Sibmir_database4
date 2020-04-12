@@ -2,16 +2,13 @@
 
 {% block content %}
     <h1>User: {{ user.username }}</h1>
-    <h1>Выполняемые задачи: {{ user.problem }}</h1>
+    <h1>{{ user.problem }}</h1>
     <hr>
     {% for post in posts %}
     <p>
     {{ post.author.username }} says: <b>{{ post.body }}</b>
     </p>
     {% endfor %}
-
-    {% include "problem/konstruirovanie.html" %}
-    {% include "problem/proektirovanie.html" %}
 
  <p class = "p" onClick = "toggle(this, 1)"><span id = "s1">&nbsp;+&nbsp;</span>Хранилище СН</p>
   <div id = "d1" style = "display:none">

@@ -48,3 +48,8 @@ class RegistrationForm(FlaskForm):
         user = User.query.filter_by(email=email.data).first()
         if user is not None:
             raise ValidationError('Пожалуйста используйте другой адрес Email')
+
+
+class RegistrationNewElement(FlaskForm):
+    name_element = StringField('Наименование:', validators=[DataRequired()])
+    submit = SubmitField('Сохранить')
